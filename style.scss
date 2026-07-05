@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'keshiva', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(202, 192, 192);
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+body {
+    background-color: #242424;
+}
+
+@mixin flex-column($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+section {
+    max-width: 2000px;
+}
+
+main {
+    width: 100%;
+    @include flex-column(1rem);
+    align-items: center;
+
+    section.view1 {
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+
+            }
+        }
+
+        .bottom {
+            background-color: #2e2c2c;
+            @include flex-column(3rem);
+            padding: 1rem 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .text {
+            @include flex-column(0.8rem);
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 100;
+                opacity: 0.5;
+                line-height: 1.5;
+
+
+            }
+
+            button {
+                @include flex-column(3rem);
+                width: fit-content;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                border: none;
+            }
+        }
+
+    }
+
+    section.view2 {
+        @include flex-column(2.5rem);
+        width: 100%;
+        padding: 1rem;
+
+        .top,
+        .bottom {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+        }
+
+        .element {
+            @include flex-column(0.5rem);
+
+            small {
+                font-size: 1rem;
+                opacity: 0.6;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    section.view3 {
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(1.5rem);
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            background-color: #2b2a2a;
+            border-radius: 1rem;
+            padding: 2rem;
+            @include flex-column(3rem);
+
+
+
+            .text {
+                @include flex-column(0.8rem);
+
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-size: 2.3rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    opacity: 0.5;
+                    line-height: 1.5;
+
+
+                }
+
+                button {
+                    @include flex-column(3rem);
+                    width: fit-content;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+            }
+            .para>p{
+                font-size: 1rem;
+            }
+
+        }
+        .bottom>p {
+                text-transform: uppercase
+        }
+    }
+    section.view3b {
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(1.5rem);
+        
+        .top {
+            width: 100%;
+            
+            img {
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+        
+        .bottom {
+            background-color: #2b2a2a;
+            border-radius: 1rem;
+            padding: 2rem;
+            @include flex-column(3rem);
+            
+            
+            
+            .text {
+                @include flex-column(0.8rem);
+                
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-size: 2.3rem;
+                }
+                
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    opacity: 0.5;
+                    line-height: 1.5;
+                    
+                    
+                }
+                
+                button {
+                    @include flex-column(3rem);
+                    width: fit-content;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+            }
+            .para>p{
+                font-size: 1rem;
+            }
+            
+        }
+        .bottom>p {
+            text-transform: uppercase
+        }
+    }
+    
+    section.view4{
+        
+        display: flex;
+        @include flex-column(2rem);
+        gap: 1rem;
+        width:100%;
+        padding: 1rem 1rem;
+        
+        
+        .card1{
+            width: 100%;
+            background-image: url(rc1.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            border-radius: 1rem;
+            
+            @include flex-column(0);
+            justify-content: space-between;
+            padding: 1rem;
+            
+            .icon,.bottom{
+                background-color: rgba(0, 0, 0, 0.359);
+                backdrop-filter: blur(0.2rem);
+                border:0.1rem, solid rgba(255, 255, 255, 0.412) ;
+                border-radius: 0.4rem;
+                padding: 1rem;
+            }
+            
+            .icon{
+                width: fit-content;
+                border-radius: 50%;
+                
+            }
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1rem;
+                
+                p{
+                    text-transform: uppercase;
+                    padding: 0.3rem;
+                }
+            }
+        }
+        .card2{
+            width: 100%;
+            background-image: url(rc2.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            border-radius: 1rem;
+            
+            @include flex-column(0);
+            justify-content: space-between;
+            padding: 1rem;
+            
+            .icon,.bottom{
+                background-color: rgba(0, 0, 0, 0.359);
+                backdrop-filter: blur(0.2rem);
+                border:0.1rem, solid rgba(255, 255, 255, 0.412) ;
+                border-radius: 0.4rem;
+                padding: 1rem;
+            }
+            
+            .icon{
+                width: fit-content;
+                border-radius: 50%;
+                
+            }
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1rem;
+                
+                p{
+                    text-transform: uppercase;
+                    padding: 0.3rem;
+                }
+            }
+        }
+        .card3{
+            width: 100%;
+            background-image: url(rc3.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            border-radius: 1rem;
+            
+            @include flex-column(0);
+            justify-content: space-between;
+            padding: 1rem;
+            
+            .icon,.bottom{
+                background-color: rgba(0, 0, 0, 0.359);
+                backdrop-filter: blur(0.2rem);
+                border:0.1rem, solid rgba(255, 255, 255, 0.412) ;
+                border-radius: 0.4rem;
+                padding: 1rem;
+            }
+            
+            .icon{
+                width: fit-content;
+                border-radius: 50%;
+                
+            }
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1rem;
+                
+                p{
+                    text-transform: uppercase;
+                    padding: 0.3rem;
+                }
+            }
+        }
+    }
+    section.view5 {
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        .top {
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .bottom{    
+            @include flex-column(1rem);
+            padding: 1rem;
+            justify-content: space-between;
+            background-color: #242424
+        }
+
+        .text {
+            @include flex-column(0.8rem);
+
+        p{
+            text-transform: uppercase;
+            opacity: 0.6;
+            gap: 1rem;
+        }
+        h1 {
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 1.6rem;
+
+            }
+        }
+        .if{
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+
+            
+        }    
+
+    } 
+}           
+
+        
+        
+        
+        
+        
+        @media (min-width: 768px) {
+            main {
+                background-color: #242424;
+                
+                section.view1 {
+                    flex-direction: row;
+            padding: 1.5rem 3rem;
+
+
+
+            .top,
+            .bottom {
+                width: 50%;
+            }
+
+            .bottom {
+                justify-content: space-between;
+                padding: 1rem 3rem;
+
+
+                .text {
+                    h1 {
+                        font-size: 2.3rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+
+                    width: 90%;
+                    gap: 1.5rem;
+                    ;
+                }
+
+                .text {
+                    @include flex-column(0.8rem);
+
+                    h1 {
+                        text-transform: uppercase;
+                        font-weight: 100;
+                        font-size: 2.3rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        opacity: 0.5;
+                        line-height: 1.5;
+
+
+                    }
+
+                    button {
+                        @include flex-column(3rem);
+                        width: fit-content;
+                        padding: 0.5rem 1rem;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                }
+
+            }
+        }
+
+        section.view2 {
+            flex-direction: row;
+            padding: 1.5rem 3rem;
+        }
+
+        section.view3 {
+            flex-direction: row-reverse;
+
+            .top,
+            .bottom {
+                width: 50%;
+            }
+
+            .bottom {
+                justify-content: space-between;
+                padding: 3rem;
+            }
+
+
+
+            .para {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+        section.view3b {
+            flex-direction: row;
+
+            .top,
+            .bottom {
+                width: 50%;
+            }
+
+            .bottom {
+                justify-content: space-between;
+                padding: 3rem;
+            }
+
+
+
+            .para {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        section.view4{
+            flex-direction: row;
+        }
+
+    }
+
+
+}
